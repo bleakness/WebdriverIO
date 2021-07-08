@@ -20,8 +20,7 @@ describe('My webdriverIO testing application', () => {
         await (await $('button[type="submit"]')).click();
 
         await expect($('#flash')).toBeExisting();
-        await expect($('#flash')).toHaveTextContaining(
-            'Your username is invalid!');
+        await expect($('#flash')).toHaveTextContaining('Your username is invalid!');
     });
     it('Logout testing', async () => {
         await browser.url(`https://the-internet.herokuapp.com/login`);
